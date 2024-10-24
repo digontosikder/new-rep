@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnClick in Function</title>
+</head>
+<body>
+    <button id="myButton">Click Me!</button>
+
+
+
+
+    <form>
+        <h6 class="footer-title text-white">Drop a Message</h6>
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text"></span>
+          </label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item rounded-lg" />
+            
+          </div>
+          <div class="mt-4">
+              <button class="btn bg-[#0E7A81] text-white text-xl join-item w-[207px]">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    
+    <script>
+        // ফাংশন যা অন-ক্লিক ইভেন্ট যোগ করে
+        function addClickEvent() {
+            // ID এর মাধ্যমে বোতামটিকে নির্বাচন করা
+            var button = document.getElementById('myButton');
+            
+            // বোতামে onclick ইভেন্ট হ্যান্ডলার যোগ করা
+            button.onclick = function() {
+                alert('Button Clicked!');
+            };
+        }
+
+        // পেজ লোড হলে ইভেন্ট যোগ করা হবে
+        window.onload = function() {
+            addClickEvent(); // ফাংশন কল
+        };
+    </script>
+</body>
+</html>
